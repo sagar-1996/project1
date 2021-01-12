@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login1.css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="login-box">
+      <form method="post" action="index.xhtml" onsubmit="return validate();">
+      <h1>Login</h1>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" id="login"required>
+      </div>
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" id="password"required>
+      </div>
+      <button type="button" class="btn btn-primary" id="btn1" onclick="validate();"> Log In </button><br>
+      <a href="#">Forgotten password?</a>
+      <hr><br>
+        <a href="singup1.html" class="btn btn-info" role="button" id="btn2">Create New User Account </a>
+    </form>
+    </div>
+  </body>
+  <script>
+    function validate() {
+            if (document.getElementById("login").value == "") {
+                alert("User name may not be blank");
+            } else if (document.getElementById("password").value == "") {
+                alert("Password may not be blank.");
+            }
+            else{
+              
+window.location.href = "index.html" ;
+alert("successfully Login")
+            }
+        }
+  </script>
+</body>
+</html>
